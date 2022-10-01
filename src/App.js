@@ -100,6 +100,12 @@ const CreateNew = (props) => {
     navigate("/");
   };
 
+  const reset_button = () => {
+    author.reset();
+    content.reset();
+    info.reset();
+  };
+
   return (
     <div>
       <h2>create a new anecdote</h2>
@@ -126,6 +132,7 @@ const CreateNew = (props) => {
         </div>
         <button type="submit">create</button>
       </form>
+      <button onClick={reset_button}>Reset </button>
     </div>
   );
 };
